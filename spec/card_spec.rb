@@ -7,15 +7,13 @@ class Card
 end
 
 RSpec.describe Card do
-  before do
-    puts "I will run before each example"
-    @card = Card.new('Ace','Spades')
-    
+  def card
+    Card.new('Ace','Spades')
   end
   it "has a rank" do
-    expect(@card.rank).to eq('Spades')
+    expect(card.rank).to eq('Spades')
   end
   it "has a suit" do
-    expect(@card.suit).to eq('Ace')
+    expect(card.suit).to eq('Ace')
   end
 end
